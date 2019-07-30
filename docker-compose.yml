@@ -1,0 +1,14 @@
+version: '2'
+services:
+  devops-dashboard:
+    image: registry.devops.secure.myorg.com:5001/craig.koroscil/devops-dashboard
+    ports:
+     - "5000:8080"
+    links:
+      - redis
+      - mongo
+  redis:
+    image: "redis"
+  mongo:
+    image: "mongo"
+

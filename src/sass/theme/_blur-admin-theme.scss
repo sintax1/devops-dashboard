@@ -1,0 +1,28 @@
+.label {
+  border-radius: 0;
+}
+
+.label-primary {
+  background: $primary;
+}
+
+.label-info {
+  background: $primary-light;
+}
+
+.label-success {
+  background: $success;
+}
+
+.label-warning {
+  background: $warning;
+}
+
+.label-danger {
+  background: $danger;
+}
+
+.ui-tour-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  fill: rgba(0, 0, 0, 0.5);
+}

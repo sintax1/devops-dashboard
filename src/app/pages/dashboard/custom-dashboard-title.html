@@ -1,0 +1,41 @@
+<div ng-if="editMode" class="alert alert-info">Currently in edit mode. Save or undo your changes when you are done.</div>
+<h1>
+  {{model.title}}
+  <div class="dropdown pull-right" uib-dropdown
+       tour-step tour-step-title="Edit Dashboard"
+               tour-step-content="Click here to edit the layout and add Widgets to your Dashboard.<br/><br/>Once you are done editing the dashboard be sure to save it."
+               tour-step-order="10"
+               tour-step-placement="left">
+    <button class="btn btn-default btn-sm dropdown-toggle" uib-dropdown-toggle>
+      <i class="glyphicon glyphicon-option-vertical"></i>
+    </button>
+    <ul class="dropdown-menu">
+      <li ng-if="editMode" ng-click="addWidgetDialog()">
+        <a href="">Add widget</a>
+      </li>
+      <li ng-if="editMode" ng-click="editDashboardDialog()">
+        <a href="">Dashboard settings</a>
+      </li>
+      <li ng-if="options.editable && !editMode" ng-click="toggleEditMode()">
+        <a href="">Edit dashboard</a>
+      </li>
+      <li ng-if="options.editable && editMode" ng-click="toggleEditMode()">
+        <a href="">Save changes</a>
+      </li>
+      <li ng-if="options.editable && editMode" ng-click="collapseAll(true)">
+        <a href="">Collapse All</a>
+      </li>
+      <li ng-if="options.editable && editMode" ng-click="collapseAll(false)">
+        <a href="">Expand All</a>
+      </li>
+      <li ng-if="editMode" ng-click="cancelEditMode()">
+        <a href="">Undo changes</a>
+      </li>
+    </ul>
+  </div>
+</h1>
+<div tour-step tour-step-title="Dashboard"
+               tour-step-content="The Dashboard contains one or more Widgets used to perform a specific function. The layout and Widgets are fully customizable by you and saved to your profile. <br/><br/><i>Have an idea for a Widget? <a href='mailto:devops@myorg.com'>Contact us.</a></i>"
+               tour-step-order="1"
+               tour-step-placement="bottom"/>
+

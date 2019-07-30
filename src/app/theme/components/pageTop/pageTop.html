@@ -1,0 +1,17 @@
+<div class="page-top clearfix" scroll-position="scrolled" max-height="50" ng-class="{'scrolled': scrolled}">
+  <a href="#/dashboard" class="al-logo clearfix"><span>Dev</span>Ops</a>
+  <a href class="collapse-menu-link ion-navicon" ba-sidebar-toggle-menu></a>
+
+  <add-dashboard></add-dashboard>
+
+  <div class="search" tour-step tour-step-title="Search" tour-step-content="This looks cool but does nothing yet... Future feature ;)" tour-step-order="90" tour-step-placement="bottom">
+    <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
+    <input id="searchInput" type="text" placeholder="Search for...">
+  </div>
+
+  <div class="user-profile clearfix">
+    <user-info></user-info>
+    <msg-center></msg-center>
+    <dashboard-help></dashboard-help>
+  </div>
+</div>

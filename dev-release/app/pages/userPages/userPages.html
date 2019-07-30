@@ -1,0 +1,7 @@
+<div class="widget" ng-controller="UserPagesCtrl">
+  <ul>
+    <li ng-repeat="dashboard in dashboards track by $index">
+      <a ui-sref="mydashboard({name: dashboard.name})">{{dashboard.title}}</a>
+    </li>
+  <ul>
+</div>
